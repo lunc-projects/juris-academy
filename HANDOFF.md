@@ -21,6 +21,9 @@ Three parameters are NOT published in the Juris docs, so the game uses clearly-l
 
 Drop in the real values and the game matches your live parameters. Everything else — the health-factor formula (CCR ÷ minimum CCR), liquidation only when CCR falls strictly below the minimum, the supply-APR relationship (incl. the docs' 3.75% worked example), and settlement taking the stable balance before collateral — is implemented exactly as your docs describe.
 
+## One open design choice (your call)
+The checkpoint quiz between levels is currently **skippable**: stars and the next level unlock when the player hits the level goal, and "Back to level map" walks past the question (it only gates the final graduation flag). If you'd rather the quiz be required to advance, that's a small change in the level-end flow — it was left open deliberately so your team can decide.
+
 ## Continuing the build
 It's one plain HTML file (canvas + DOM, vanilla JS). Any dev can extend it: new levels follow the same pattern as the existing five, and the checks file shows how to add a test per mechanic. Branding (colours, token mark) came from jurisprotocol.com.
 
